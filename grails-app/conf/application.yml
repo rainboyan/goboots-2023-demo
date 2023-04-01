@@ -17,7 +17,7 @@ spring:
     jmx:
         unique-names: true
     main:
-        banner-mode: "off"
+        banner-mode: "console"
     groovy:
         template:
             check-template-location: false
