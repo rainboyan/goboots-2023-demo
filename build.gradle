@@ -35,7 +35,7 @@ configurations {
         resolutionStrategy {
             // Force groovy using 4.0
             dependencySubstitution {
-                substitute(module("org.codehaus.groovy:groovy")).using(module("org.apache.groovy:groovy:4.0.10"))
+                substitute(module("org.codehaus.groovy:groovy")).using(module("org.apache.groovy:groovy:4.0.11"))
             }
         }
     }
