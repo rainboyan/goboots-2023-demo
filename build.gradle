@@ -31,14 +31,6 @@ repositories {
 }
 
 configurations {
-    all {
-        resolutionStrategy {
-            // Force groovy using 4.0
-            dependencySubstitution {
-                substitute(module("org.codehaus.groovy:groovy")).using(module("org.apache.groovy:groovy:4.0.11"))
-            }
-        }
-    }
     developmentOnly
     runtimeClasspath {
         extendsFrom developmentOnly
