@@ -14,6 +14,6 @@
     <root level="info">
         <appender-ref ref="STDOUT" />
     </root>
-    <logger name="org.springframework.core.LocalVariableTableParameterNameDiscoverer" level="error"/>
+    <logger name="org.grails.boot.context" level="debug" />
     <logger name="org.rainboyan.demo.Application" level="debug"/>
 </configuration>
