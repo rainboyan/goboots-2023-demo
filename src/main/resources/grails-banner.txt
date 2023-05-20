@@ -5,4 +5,4 @@
 (> - <) | |__| | (_) | |_) | (_) | (_) | |_\__ \
 \=====/  \_____|\___/|____/ \___/ \___/ \__|___/
  ______________________________________________
- ${AnsiColor.BRIGHT_BLUE}:: GoBoots ::            ${AnsiColor.DEFAULT}${AnsiStyle.FAINT}${grails.formatted-version}
+ ${AnsiColor.BRIGHT_BLUE}:: GoBoots ::                  ${AnsiColor.DEFAULT}${AnsiStyle.FAINT}${grails.formatted-version}
