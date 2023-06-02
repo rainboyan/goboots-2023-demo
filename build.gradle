@@ -8,7 +8,7 @@ buildscript {
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "gradle.plugin.com.github.erdi.webdriver-binaries:webdriver-binaries-gradle-plugin:2.7"
-        // classpath "com.bertramlabs.plugins:asset-pipeline-gradle:5.0.0-SNAPSHOT"
+        classpath "org.grails.plugins:asset-pipeline-gradle:6.0.0-M1"
     }
 }
 
@@ -20,7 +20,7 @@ apply plugin:"idea"
 apply plugin:"war"
 apply plugin:"org.grails.grails-web"
 apply plugin:"com.github.erdi.webdriver-binaries"
-// apply plugin:"com.bertramlabs.asset-pipeline"
+apply plugin:"org.grails.asset-pipeline"
 apply plugin:"org.grails.grails-gsp"
 
 repositories {
@@ -74,7 +74,7 @@ dependencies {
     profile "org.grails.profiles:web"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
-    // runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:5.0.0-SNAPSHOT"
+    runtimeOnly "org.grails.plugins:asset-pipeline-grails:6.0.0-M1"
     // testImplementation "io.micronaut:micronaut-inject-groovy"
     testImplementation "org.grails:grails-test-support"
     testImplementation "org.mockito:mockito-core"
@@ -133,7 +133,7 @@ tasks.withType(Test) {
 }
 
 
-// assets {
-//     minifyJs = true
-//     minifyCss = true
-// }
+assets {
+    minifyJs = true
+    minifyCss = true
+}
