@@ -34,6 +34,7 @@ configurations {
     developmentOnly
     runtimeClasspath {
         extendsFrom developmentOnly
+        exclude group: 'com.sun.xml.bind', module: 'jaxb-impl'
     }
 }
 
