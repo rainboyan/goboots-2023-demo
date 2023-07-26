@@ -40,9 +40,6 @@ configurations {
 
 dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-    developmentOnly "io.methvin:directory-watcher"
-    // compileOnly "io.micronaut:micronaut-inject-groovy"
-    console "org.grails:grails-console"
     implementation "org.springframework.boot:spring-boot-starter-actuator"
     implementation "org.springframework.boot:spring-boot-starter-tomcat"
     implementation "org.springframework.boot:spring-boot-starter-logging"
@@ -72,19 +69,19 @@ dependencies {
     implementation "org.grails.plugins:hibernate5"
     implementation "org.hibernate:hibernate-core-jakarta:5.6.15.Final"
     implementation "org.grails.plugins:events"
+    implementation "org.grails.plugins:geb:6.0.0-M1"
     profile "org.grails.profiles:web"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
     runtimeOnly "org.grails.plugins:asset-pipeline-grails:6.0.0-M1"
-    // testImplementation "io.micronaut:micronaut-inject-groovy"
     testImplementation "org.grails:grails-test-support"
     testImplementation "org.mockito:mockito-core"
-    // testImplementation "org.grails.plugins:geb"
-    testImplementation "org.seleniumhq.selenium:selenium-remote-driver:4.0.0"
-    testImplementation "org.seleniumhq.selenium:selenium-api:4.0.0"
-    testImplementation "org.seleniumhq.selenium:selenium-support:4.0.0"
-    testRuntimeOnly "org.seleniumhq.selenium:selenium-chrome-driver:4.0.0"
-    testRuntimeOnly "org.seleniumhq.selenium:selenium-firefox-driver:4.0.0"
+    testImplementation "org.grails.plugins:geb:6.0.0-M1"
+    testImplementation "org.seleniumhq.selenium:selenium-remote-driver:4.9.1"
+    testImplementation "org.seleniumhq.selenium:selenium-api:4.9.1"
+    testImplementation "org.seleniumhq.selenium:selenium-support:4.9.1"
+    testRuntimeOnly "org.seleniumhq.selenium:selenium-chrome-driver:4.9.1"
+    testRuntimeOnly "org.seleniumhq.selenium:selenium-firefox-driver:4.9.1"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
