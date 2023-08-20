@@ -6,9 +6,9 @@ buildscript {
         maven { url 'https://repo.gradle.org/gradle/libs-releases' }
     }
     dependencies {
+        classpath "org.grails.plugins:asset-pipeline-gradle:6.0.0"
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-        classpath "gradle.plugin.com.github.erdi.webdriver-binaries:webdriver-binaries-gradle-plugin:2.7"
-        classpath "org.grails.plugins:asset-pipeline-gradle:6.0.0-M1"
+        classpath "com.github.erdi:webdriver-binaries-gradle-plugin:3.2"
     }
 }
 
@@ -18,9 +18,9 @@ group "org.rainboyan.demo"
 apply plugin:"eclipse"
 apply plugin:"idea"
 apply plugin:"war"
-apply plugin:"org.grails.grails-web"
 apply plugin:"com.github.erdi.webdriver-binaries"
 apply plugin:"org.grails.asset-pipeline"
+apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.grails-gsp"
 
 repositories {
@@ -45,6 +45,7 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-logging"
     implementation "org.springframework.boot:spring-boot-starter-validation"
     implementation "org.springframework.boot:spring-boot-autoconfigure"
+    console "org.grails:grails-console"
     implementation "org.grails:grails-boot"
     implementation "org.grails:grails-core"
     implementation "org.grails:grails-logging"
@@ -68,20 +69,21 @@ dependencies {
     implementation "org.grails.plugins:fields"
     implementation "org.grails.plugins:hibernate5"
     implementation "org.hibernate:hibernate-core-jakarta:5.6.15.Final"
+    implementation "org.grails.plugins:database-migration:4.2.0"
     implementation "org.grails.plugins:events"
     implementation "org.grails.plugins:geb"
     profile "org.grails.profiles:web"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
-    runtimeOnly "org.grails.plugins:asset-pipeline-grails:6.0.0-M1"
+    runtimeOnly "org.grails.plugins:asset-pipeline-grails:6.0.0"
     testImplementation "org.grails:grails-test-support"
     testImplementation "org.mockito:mockito-core"
     testImplementation "org.grails.plugins:geb"
-    testImplementation "org.seleniumhq.selenium:selenium-remote-driver:4.9.1"
-    testImplementation "org.seleniumhq.selenium:selenium-api:4.9.1"
-    testImplementation "org.seleniumhq.selenium:selenium-support:4.9.1"
-    testRuntimeOnly "org.seleniumhq.selenium:selenium-chrome-driver:4.9.1"
-    testRuntimeOnly "org.seleniumhq.selenium:selenium-firefox-driver:4.9.1"
+    testImplementation "org.seleniumhq.selenium:selenium-remote-driver:4.11.0"
+    testImplementation "org.seleniumhq.selenium:selenium-api:4.11.0"
+    testImplementation "org.seleniumhq.selenium:selenium-support:4.11.0"
+    testRuntimeOnly "org.seleniumhq.selenium:selenium-chrome-driver:4.11.0"
+    testRuntimeOnly "org.seleniumhq.selenium:selenium-firefox-driver:4.11.0"
 }
 
 java {
