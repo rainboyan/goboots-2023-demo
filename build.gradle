@@ -12,6 +12,8 @@ buildscript {
     }
 }
 
+ext['spring-boot.version'] = '3.1.2'
+
 version "0.1"
 group "org.rainboyan.demo"
 
