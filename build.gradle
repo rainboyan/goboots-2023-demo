@@ -6,11 +6,14 @@ buildscript {
         maven { url 'https://repo.gradle.org/gradle/libs-releases' }
     }
     dependencies {
+        classpath "org.gradle:gradle-tooling-api:8.3"
         classpath "org.grails.plugins:asset-pipeline-gradle:6.0.0"
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "com.github.erdi:webdriver-binaries-gradle-plugin:3.2"
     }
 }
+
+ext['groovy.version'] = '5.0.0-alpha-1'
 
 version "0.1"
 group "org.rainboyan.demo"
@@ -28,9 +31,13 @@ repositories {
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
     maven { url 'https://repo.gradle.org/gradle/libs-releases' }
+    maven { url "https://groovy.jfrog.io/ui/native/libs-release-local/" }
 }
 
 configurations {
+    all {
+        exclude group: 'org.spockframework', module: 'spock-core'
+    }
     developmentOnly
     runtimeClasspath {
         extendsFrom developmentOnly
