@@ -6,7 +6,7 @@ buildscript {
         maven { url 'https://repo.gradle.org/gradle/libs-releases' }
     }
     dependencies {
-        classpath "org.grails.plugins:asset-pipeline-gradle:6.0.2"
+        classpath "org.grails.plugins:asset-pipeline-gradle:6.0.3"
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "com.github.erdi:webdriver-binaries-gradle-plugin:3.2"
     }
@@ -75,7 +75,7 @@ dependencies {
     profile "org.grails.profiles:web"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
-    runtimeOnly "org.grails.plugins:asset-pipeline-grails:6.0.2"
+    runtimeOnly "org.grails.plugins:asset-pipeline-grails:6.0.3"
     testImplementation "org.grails:grails-test-support"
     testImplementation "org.mockito:mockito-core"
     testImplementation "org.grails.plugins:geb"
