@@ -33,7 +33,7 @@ repositories {
 configurations {
     developmentOnly
     runtimeClasspath {
-        extendsFrom developmentOnly
+        // extendsFrom developmentOnly
         exclude group: 'com.sun.xml.bind', module: 'jaxb-impl'
     }
 }
@@ -69,7 +69,7 @@ dependencies {
     implementation "org.grails.plugins:fields"
     implementation "org.grails.plugins:hibernate5"
     implementation "org.hibernate:hibernate-core-jakarta:5.6.15.Final"
-    implementation "org.grails.plugins:database-migration:4.2.0"
+    implementation "org.grails:grails-plugin-database-migration:6.0.0"
     implementation "org.grails.plugins:events"
     implementation "org.grails.plugins:geb"
     profile "org.grails.profiles:web"
